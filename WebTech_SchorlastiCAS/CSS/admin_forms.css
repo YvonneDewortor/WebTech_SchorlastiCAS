@@ -1,0 +1,520 @@
+/*fonts*/
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+html,
+body {
+    /* background: #2F1E27; */
+    background: -webkit-linear-gradient(90deg, #2F1E27 10%, #43343d 90%) !important;
+    /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(90deg, #2F1E27 10%, #43343d 90%) !important;
+    /* FF3.6+ */
+    background: -ms-linear-gradient(90deg, #2F1E27 10%, #43343d 90%) !important;
+    /* IE10 */
+    background: -o-linear-gradient(90deg, #2F1E27 10%, #43343d 90%) !important;
+    /* Opera 11.10+ */
+    background: linear-gradient(90deg, #2F1E27 10%, #43343d 90%) !important;
+    /* W3C */
+}
+
+body {
+    counter-reset: section;
+    text-align: center;
+}
+
+.back {
+    z-index: 4;
+    position: relative;
+    float: left;
+    top: 40vh;
+    left: 25px;
+}
+
+.container {
+    position: relative;
+    top: 20px;
+}
+
+.container h1,
+.container span {
+    font-family: "Pt Sans", helvetica, sans-serif;
+}
+
+.container h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: 100;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.container h2 {
+    font-family: "droid serif";
+    font-style: italic;
+    color: #d3b6ca;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.container form span:before {
+    counter-increment: section;
+    content: counter(section);
+    border: 2px solid #4c2639;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 1.6em;
+    font-size: 1.5em;
+    position: relative;
+    left: -22px;
+    top: -11px;
+    background: #2F1E27;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.entry-selection {
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.entry-selection input {
+    min-width: 10%;
+    width: 10%;
+}
+
+.entry-selection-btn {
+    align-items: center;
+    justify-content: center;
+}
+
+.entry-selection-btn button {
+    background: rgba(197, 62, 126, .33) ! important;
+    color: #fff;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 22px;
+    border: transparent;
+}
+
+form {
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.home-fields {
+    text-align: center;
+    align-items: center;
+    max-width: 200px;
+    display: inline-block;
+}
+
+.fields {
+    align-items: center;
+}
+
+.fields a,
+.home-fields a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    /* border-bottom: solid rgba(197, 62, 126, .33) 2px; */
+}
+
+.fields a::after,
+.home-fields a::after {
+    content: "";
+    background: rgba(197, 62, 126, .33);
+    /* mix-blend-mode: exclusion; */
+    width: calc(100% + 20px);
+    height: 0;
+    position: absolute;
+    bottom: -4px;
+    left: -10px;
+    transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    border-radius: 22px;
+    border-bottom: solid palevioletred 2px;
+}
+
+.fields a:hover::after,
+.home-fields a:hover::after {
+    height: calc(100% + 8px);
+}
+
+.container span {
+    margin-bottom: 22px;
+    display: inline-block;
+}
+
+.container span:last-child {
+    margin-bottom: -11px;
+}
+
+input,
+select,
+textarea {
+    border: none;
+    outline: none;
+    display: inline-block;
+    height: 34px;
+    vertical-align: middle;
+    position: relative;
+    bottom: 14px;
+    right: 9px;
+    border-radius: 22px;
+    width: 220px;
+    box-sizing: border-box;
+    padding: 0 18px;
+}
+
+input[type="button"] {
+    background: rgba(197, 62, 126, .33) ! important;
+    color: #fff;
+    position: relative;
+    left: 9px;
+    top: 25px;
+    width: 150px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+input[type="submit"] {
+    background: rgba(197, 62, 126, .33) ! important;
+    color: #fff;
+    position: relative;
+    left: 9px;
+    top: 25px;
+    width: 100px;
+    cursor: pointer;
+}
+
+select {
+    background-color: #1E282F;
+    color: white;
+    cursor: pointer;
+}
+
+select:hover {
+    background-color: transparent;
+    color: white;
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #fff;
+}
+
+select option {
+    background-color: #1E282F;
+    color: white;
+    height: 50%;
+    cursor: pointer;
+}
+
+select option:hover {
+    height: 34px;
+}
+
+input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.custom-file-upload {
+    color: #fff;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    width: 190px;
+    border-radius: 22px;
+    margin-right: 10px;
+    margin-left: -5px;
+}
+
+.wrapper {
+    text-align: center;
+    /* margin: 50px auto; */
+    font-family: 'Roboto', sans-serif;
+}
+
+.tabs {
+    margin-top: 50px;
+    font-size: 15px;
+    padding: 0px;
+    list-style: none;
+    background: #43343d;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    border-radius: 50px;
+    position: relative;
+}
+
+.tabs a {
+    text-decoration: none;
+    color: #777;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition-duration: 0.6s;
+}
+
+.tabs a.active {
+    color: #fff;
+}
+
+.tabs a i {
+    margin-right: 5px;
+}
+
+.wrapper .tabs .selector {
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    border-radius: 50px;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background: rgba(197, 62, 126, .33);
+    /* background: -moz-linear-gradient(45deg, #2f1e28 0%, rgba(197, 62, 126, .33) 100%);
+    background: -webkit-linear-gradient(45deg, #2f1e28 0%, rgba(197, 62, 126, .33) 100%);
+    background: linear-gradient(45deg, #2f1e28 0%, rgba(197, 62, 126, .33) 100%); */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#2f1e28', endColorstr='rgba(197, 62, 126, .33)', GradientType=1);
+    overflow: auto;
+}
+
+.back button {
+    -webkit-appearance: none;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+.back svg {
+    padding: 5px;
+}
+
+.back .arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -45px;
+    margin-left: -35px;
+    width: 70px;
+    height: 90px;
+}
+
+.back .left {
+    left: 42%;
+}
+
+.back .right {
+    left: 58%;
+}
+
+.back .left:hover polyline,
+.back .left:focus polyline {
+    stroke-width: 3;
+}
+
+.back .left:active polyline {
+    stroke-width: 6;
+    transition: all 100ms ease-in-out;
+}
+
+.back .right:hover polyline,
+.back .right:focus polyline {
+    stroke-width: 3;
+}
+
+.back .right:active polyline {
+    stroke-width: 6;
+    transition: all 100ms ease-in-out;
+}
+
+.back polyline {
+    transition: all 250ms ease-in-out;
+}
+
+.responsive-table li {
+    border-radius: 3px;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.responsive-table .table-header {
+    background-color: #3f1e2f;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.responsive-table .table-row {
+    background-color: #d3b6ca;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.responsive-table .col-1 {
+    flex-basis: 15%;
+}
+
+.responsive-table .col-2 {
+    flex-basis: 15%;
+}
+
+.responsive-table .col-3 {
+    flex-basis: 15%;
+}
+
+@media all and (max-width: 767px) {
+    .responsive-table .table-header {
+        display: none;
+    }
+    .responsive-table li {
+        display: block;
+    }
+    .responsive-table .col {
+        flex-basis: 100%;
+    }
+    .responsive-table .col {
+        display: flex;
+        padding: 10px 0;
+    }
+    .responsive-table .col:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+    }
+}
+
+.tbl-container {
+    color: white;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'lato', sans-serif;
+}
+
+.centered-div {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.search_form {
+    display: block !important;
+    position: relative;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+    z-index: 5;
+}
+
+.search_form input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.search_form .fa {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 0.5s;
+}
+
+.search_form:hover {
+    width: 200px;
+    cursor: pointer;
+}
+
+.search_form:hover input {
+    display: block;
+}
+
+.search_form:hover .fa {
+    background: #07051a;
+    color: white;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #3f1e2f;
+}
+
+.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #d3b6ca;
+}
+
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: #324f69!important;
+    color: #ffffff;
+}
